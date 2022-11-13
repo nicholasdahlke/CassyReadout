@@ -122,7 +122,8 @@ int main()
         return -1;
 
     std::cout << "Enter  Capture Path: ";
-    std::cin >> capture_path;
+    std::cin.ignore();
+    std::getline(std::cin, capture_path);
     cap_file.open(capture_path);
     if(!cap_file.is_open())
         return -1;
